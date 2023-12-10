@@ -38,7 +38,7 @@ Python 3.9 and packages version:
 ### 3.2 **Model**
    -  The overall architectures of BERT-TFBS which consists of a DNABERT-2 module, a CNN module, a CBAM, and an output module, can be visualized in the following diagram:
      
-      ![Model Architecture](https://github.com/ZX1998-12/BERT-TFBSs/raw/master/Model/model.jpg)
+      ![Model Architecture](https://github.com/ZX1998-12/BERT-TFBS/raw/master/Model/model.jpg)
 
    - `model.pth` is the model which is trained on the Hepg2 FOSL2 ChIP-seq dataset and represents the BERT-TFBS model.
      
