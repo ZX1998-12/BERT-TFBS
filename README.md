@@ -8,7 +8,6 @@
    1. [Dataset](#Dataset)
    2. [Model](#Model)
    3. [script](#script)
-   4. [Result](#Result)
 ---
 
 ## 1. Introduction
@@ -69,6 +68,3 @@ Python 3.9 and packages version:
    - `linear_model.py` is the BERT-TFBS-v1 variant model which is constructed by removing the CNN module, CBAM, and the convolutional layer in the output module from BERT-TFBS.
    - `CNN_model.py` is the BERT-TFBS-v2 variant model which is constructed by removing CBAM from BERT-TFBS.
    - `model.py` is the BERT-TFBS which consists of a DNABERT-2 module, a CNN module, a CBAM, and an output module.
-
-### 3.4 **Result**
-   - This folder comprises detailed result images from the performance of the model on the 165 ChIP-seq datasets.
