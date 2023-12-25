@@ -61,8 +61,8 @@ Python 3.9 and packages version:
 
 ### 3.3 **script**
    - `dataloader.py` converts DNA sequences into token embeddings.
+   - `adjust_learning.py` utilizes warm-up and cosine annealing techniques to adjust the learning rate of the optimizer.
    - `CBAM.py` implements the CBAM which integrates channel attention and spatial attention mechanisms, enhancing the representation of local features by emphasizing important channels and spatial information.
-   - `adjust_learning.py` is the learning rate of the optimizer which is adjusted by using warm-up and cosine annealing techniques.
    - `model.py` implements the BERT-TFBS which consists of a DNABERT-2 module, a CNN module, a CBAM, and an output module.
    - `model_V1.py` implements the BERT-TFBS-v1 variant model which is constructed by removing the CNN module, CBAM, and the convolutional layer in the output module from BERT-TFBS.
    - `model_V2.py` implements the BERT-TFBS-v2 variant model which is constructed by removing CBAM from BERT-TFBS.
