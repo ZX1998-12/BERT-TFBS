@@ -2,7 +2,7 @@ import torch
 import torch.utils.data as Data
 from transformers import AutoTokenizer
 
-
+# Convert sequences to tokens and pad the sequence length
 def input_token(train_sentences, train_labels, test_sentences, test_labels):
     tokenizer = AutoTokenizer.from_pretrained("zhihan1996/DNABERT-2-117M", trust_remote_code=True)
     train_inputs = [tokenizer(sentence, return_tensors='pt')["input_ids"].squeeze() for sentence in train_sentences]
