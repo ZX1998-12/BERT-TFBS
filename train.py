@@ -9,8 +9,8 @@ from script.adjust_learning import *
 from script.dataloader import *
 from script.model import *
 # BERT-TFBS-V1 Model and BERT-TFBS-V2 model in ablation experiments
-# from script.CNN_model import *
-# from script.linear_model import *
+# from script.model_V1 import *
+# from script.model_V2 import *
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
