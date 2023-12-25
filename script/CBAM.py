@@ -2,22 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-
-class BasicConv(nn.Module):
-    def __init__(self, in_planes, out_planes, kernel_size):
-        super(BasicConv, self).__init__()
-        self.out_channels = out_planes
-        self.conv = nn.Conv1d(in_planes, out_planes, kernel_size=kernel_size, stride=1, padding=3, bias=False)
-        self.bn = nn.BatchNorm1d(out_planes, eps=1e-5, momentum=0.01, affine=True)
-        self.relu = nn.ReLU()
-
-    def forward(self, x):
-        x = self.conv(x)
-        x = self.bn(x)
-        x = self.relu(x)
-        return x
-
-
+# Obtain channel attention
 class ChannelGate(nn.Module):
     def __init__(self, gate_channels, reduction_ratio, pool_types):
         super(ChannelGate, self).__init__()
@@ -47,11 +32,27 @@ class ChannelGate(nn.Module):
         return x * scale
 
 
+class BasicConv(nn.Module):
+    def __init__(self, in_planes, out_planes, kernel_size):
+        super(BasicConv, self).__init__()
+        self.out_channels = out_planes
+        self.conv = nn.Conv1d(in_planes, out_planes, kernel_size=kernel_size, stride=1, padding=3, bias=False)
+        self.bn = nn.BatchNorm1d(out_planes, eps=1e-5, momentum=0.01, affine=True)
+        self.relu = nn.ReLU()
+
+    def forward(self, x):
+        x = self.conv(x)
+        x = self.bn(x)
+        x = self.relu(x)
+        return x
+        
+
 class ChannelPool(nn.Module):
     def forward(self, x):
         return torch.cat((torch.max(x, 1)[0].unsqueeze(1), torch.mean(x, 1).unsqueeze(1)), dim=1)
 
 
+# Obtain spatial attention
 class SpatialGate(nn.Module):
     def __init__(self):
         super(SpatialGate, self).__init__()
