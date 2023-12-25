@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from transformers import AutoModel
 
-
+# Build CNN module
 class CNNNET(nn.Module):
     def __init__(self, input_channel):
         super(CNNNET, self).__init__()
@@ -62,7 +62,7 @@ class CNNNET(nn.Module):
         x = self.linear2(x)
         return F.softmax(x, dim=1)
 
-
+# Build BERT-TFBS-V2 module
 class Bert_Blend_CNN(nn.Module):
     def __init__(self,input_channel):
         super(Bert_Blend_CNN, self).__init__()
