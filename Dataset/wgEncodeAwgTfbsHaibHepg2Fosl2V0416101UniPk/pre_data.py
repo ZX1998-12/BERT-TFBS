@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 dataset_folder = 'dataset\\'
-# Iterate over 165 ENCODE ChIP-seq datasets.
+# Iterate over 165 ENCODE ChIP-seq datasets
 for folder_name in os.listdir(dataset_folder):
     folder_path = os.path.join(dataset_folder, folder_name)
     if os.path.isdir(folder_path):
