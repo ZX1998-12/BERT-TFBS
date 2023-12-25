@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-dataset_folder = 'E:\\daima\\bioinformatics\\TF\\dataset\\'
+dataset_folder = 'dataset\\'
 for folder_name in os.listdir(dataset_folder):
     folder_path = os.path.join(dataset_folder, folder_name)
     if os.path.isdir(folder_path):
