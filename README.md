@@ -50,14 +50,14 @@ Python 3.9 and packages version:
      tokenizer = AutoTokenizer.from_pretrained("zhihan1996/DNABERT-2-117M", trust_remote_code=True)
      model = AutoModel.from_pretrained("zhihan1996/DNABERT-2-117M", trust_remote_code=True)
      ```
-   - To train the model, we can run the `train.py` script using the training dataset.
+   - To train the model, we can run `train.py` script using the training dataset.
      
      ```shell
      # Example code to train the model
      python train.py
      ```
      
-     We can also run the `test.py` to test the model
+     We can also run `test.py` to test the model
 
 ### 3.3 **script**
    - `dataloader.py` converts DNA sequences into token embeddings.
