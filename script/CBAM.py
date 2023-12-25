@@ -31,7 +31,7 @@ class ChannelGate(nn.Module):
         scale = torch.sigmoid(channel_att_sum).expand_as(x)
         return x * scale
 
-
+# A basic CNN module
 class BasicConv(nn.Module):
     def __init__(self, in_planes, out_planes, kernel_size):
         super(BasicConv, self).__init__()
@@ -46,7 +46,7 @@ class BasicConv(nn.Module):
         x = self.relu(x)
         return x
         
-
+# Perform pooling operation along the channels.
 class ChannelPool(nn.Module):
     def forward(self, x):
         return torch.cat((torch.max(x, 1)[0].unsqueeze(1), torch.mean(x, 1).unsqueeze(1)), dim=1)
