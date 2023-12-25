@@ -2,7 +2,7 @@ from transformers import AutoModel
 
 from .CBAM import *
 
-
+# CNN module
 class CNNNET(nn.Module):
     def __init__(self, input_channel):
         super(CNNNET, self).__init__()
@@ -71,7 +71,7 @@ class CNNNET(nn.Module):
         x = self.linear2(x)
         return F.softmax(x, dim=1)
 
-
+# Build BERT-TFBS model
 class Bert_Blend_CNN(nn.Module):
     def __init__(self, input_channel):
         super(Bert_Blend_CNN, self).__init__()
