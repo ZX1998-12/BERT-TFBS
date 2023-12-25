@@ -8,7 +8,7 @@ from transformers import AdamW
 from script.adjust_learning import *
 from script.dataloader import *
 from script.model import *
-# DeepBL Model and DeepBC Model in ablation experiments
+# BERT-TFBS-V1 Model and BERT-TFBS-V2 model in ablation experiments
 # from script.CNN_model import *
 # from script.linear_model import *
 
