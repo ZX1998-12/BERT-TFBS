@@ -2,7 +2,7 @@ from transformers import AutoModel
 
 from .CBAM import *
 
-# build CNN module and CBAM
+# Build CNN module and CBAM
 class CNNNET(nn.Module):
     def __init__(self, input_channel):
         super(CNNNET, self).__init__()
