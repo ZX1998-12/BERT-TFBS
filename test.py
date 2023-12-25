@@ -5,9 +5,9 @@ from sklearn.metrics import roc_auc_score, average_precision_score
 
 from script.dataloader import *
 from script.model import *
-# DeepBL Model and DeepBC Model in ablation experiments
-# from script.CNN_model import *
-# from script.linear_model import *
+# BERT-TFBS-V1 model and BERT-TFBS-V2 model in ablation experiments
+# from script.model_V1 import *
+# from script.model_V2 import *
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
